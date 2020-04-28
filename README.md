@@ -11,10 +11,6 @@ While for each request/response received, theoretically it's more reasonable to 
 
 For  front-back end interaction, as I've said before, common database access is a viable and elegant way to implement. For front-end implemented in Django, ORM is taken under the hood; while for backend, C++ version postgres SQL manipulation is a prerequisite.
 
-#### How to run our code
-- You can directly run the service by `sudo docker-compose build` and `sudo docker-compose up`.
-- For standalone test, you should remove `host=db` in `databaseLogger.hpp`
-
 #### Other
 - For debugging, thread-safe logger is implemented in singleton pattern.
 - Following the Single Responsible Principle, classes in the backend are well designed to promise only one functionality, so it won't be hard for developers and code reviewers to read and understand.
