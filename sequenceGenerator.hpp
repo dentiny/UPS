@@ -27,12 +27,13 @@
 
 class SequenceGenerator
 {
-    typedef std::pair<int, UGoPickup> UGoPickup_with_time;
-    typedef std::pair<int, UGoDeliver> UGoDeliver_with_time;
-    typedef std::pair<int, UQuery> UQuery_with_time;
-    typedef std::pair<int, UtoALoadRequest> UtoALoadRequest_with_time;
-    typedef std::pair<int, Delivery> Delivery_with_time;
-    typedef std::pair<int, UserValidationResponse> UserValidationResponse_with_time;
+private:
+    using UGoPickup_with_time = std::pair<int, UGoPickup>;
+    using UGoDeliver_with_time = std::pair<int, UGoDeliver>;
+    using UQuery_with_time = std::pair<int, UQuery>;
+    using UtoALoadRequest_with_time = std::pair<int, UtoALoadRequest>;
+    using Delivery_with_time = std::pair<int, Delivery>;
+    using UserValidationResponse_with_time = std::pair<int, UserValidationResponse>;
 
 private:
     int getCurrentSecond() const
@@ -154,7 +155,7 @@ public:
     // record every received/handle sequence number, in order to avoid re-handling
     void addHandledRequest(int seqNum)
     {
-        seq_handled.insert(seq, getTimestamp());
+        seq_handled.insert(seqNum, getTimestamp());
     }
 
     // check if the sequence has been handled
