@@ -16,5 +16,5 @@ For  front-back end interaction, as I've said before, common database access is 
 - Following the Single Responsible Principle, classes in the backend are well designed to promise only one functionality, so it won't be hard for developers and code reviewers to read and understand.
 - Though not required in the list, we also add creation time, pick up time, load time and delivery time to better help users to understand and track the package.
 
-#### Amazon size link
-[Amazon size link](https://github.com/yueyingyang/shopping-delivery-system)
+#### Amazon side link
+[Amazon side link](https://github.com/yueyingyang/shopping-delivery-system)
